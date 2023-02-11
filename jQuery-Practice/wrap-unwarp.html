@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+        <h2>This is Heading tags</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ipsum architecto mollitia!</p>
+    </div>
+    <div>
+        <button type="button" id="wrapButton">Wrap</button>
+        <button type="button" id="unWrapButton">unWrap</button>
+    </div>
+    <script>
+        $(document).ready(function(){
+           $("#wrapButton").click(function(){
+              console.log("wrap");
+             $("#box p").wrap("<h1></h1>");
+           });
+           $("#unWrapButton").click(function(){
+             console.log("unwarp");
+             $("#box p").unwrap();
+           });
+        });
+    </script>
+</body>
+</html>

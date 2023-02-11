@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        #box{
+            border:2px solid red;
+            padding:10px;
+            background-color: pink;
+            font-size:20px;
+        }
+        button{
+            width:170px;
+            height:40px;
+            font-size:20px;
+            font-weight:bold;
+            background-color: rgb(106, 128, 106);
+            padding:5px;
+            margin:4px;
+            border:none;
+            outline:none;
+            box-shadow:5px 5px 2px black;
+        }
+        button:hover{
+            background-color: red;
+            color:white;
+        }
+        .first{
+            background-color: brown!important;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <h2>Test Box</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, corporis.</p>
+    </div>
+    <br/>
+    <button id="addbutton">Add Class</button>
+    <button id="removebutton">Remove Class</button>
+    <button id="togglebutton">Toggle Class</button>
+
+    <script>
+        $(document).ready(function(){
+            //addClass () method.
+         $("#addbutton").click(function(){
+            $("#box").addClass("first second");
+         });
+
+         //removeClass.
+         $("#removebutton").click(function(){
+           $("#box").removeClass("first");
+         });
+
+         //toggleClass.
+         $("#togglebutton").click(function(){
+           $("#box").toggleClass("first");
+         });
+        });
+    </script>
+</body>
+</html>

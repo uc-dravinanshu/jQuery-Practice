@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <style>
+        #box{
+            border: 2px solid red;
+            background-color: pink;
+            padding:18px;
+        }
+        .red{
+            color:red;
+            background-color: blueviolet;
+            font-size: 46px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div id="box" class="test">
+        <h2>Test Box</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing.
+            <span>Lorem ipsum dolor sit amet.</span>
+        </p>
+    </div>
+    <br/><br>
+    <button id="clickbutton">Set Value</button>
+    <br/><br/>
+    <form action="" id="sform">
+        <input type="text" name="sname" id="sname"/>
+        <br/><br/>
+        <input type="submit" value="submit"/>
+    </form>
+    <script>
+        $(document).ready(function(){
+           $("#clickbutton").click(function(){
+              //change text.
+              $("#box h2").text("Dravinanshu Mishra");
+              $("#box p").text("lorem100");
+               //change HTML tags.
+               $("#box p").html("<h1>lorem100</h1>");
+               //attribute. set.
+               $("#box h2").attr("class","red");
+               //value set.
+            });
+        });
+
+        $(document).ready(function(){
+             $("#sname").val("dravinanshu mishra");
+        });
+    </script>
+</body>
+</html>
